@@ -7,10 +7,12 @@ const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [
     'What is the name of your project?',
-    'What was your motivation behind this project?',
-    'What problem did you solve',
-    'Enter the GitHub username of anyone else you worked on this project with. (Leave blank if no-one else)',
-    'What type of license did you use?',
+    'Enter your gitHub username',
+    'Enter your email',
+    'Enter the github usernames of other people who worked on this project with you seperated by a comma.',
+    'Write installation instructions to run this project',
+    'Write instructions for testiing this code',
+    'What type of license would you like to use?',
 ];
 
 // TODO: Create a function to write README file
@@ -23,7 +25,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
 // Clear existing log files
-    inquirer
+    
+
+inquirer
     .prompt([
         {
             // Get project name
@@ -32,37 +36,52 @@ function init() {
             name: 'projectName',
         },
         {
-            // Get user motivation
+            // Get user name
             type: 'input',
             message: questions[1],
-            name: 'motivation',
+            name: 'userName',
         },
         {
-            // Get user problems
+            // Get user email
             type: 'input',
-            message: questions[2],
-            name: 'problem',
+            message: questions[3],
+            name: 'email',
+        },
+        {
+            // Get user project description
+            type: 'input',
+            message: questions[4],
+            name: 'description',
         },
         {
             // Get credits
             type: 'input',
-            message: questions[3],
+            message: questions[5],
             name: 'credits',
+        },
+        {
+            // Get install instructions
+            type: 'input',
+            message: questions[6],
+            name: 'installationaIns',
+        },
+        {
+            // Testing Instructions
+            type: 'input',
+            message: questions[6],
+            name: 'testingIns',
         },
         {
             // Get license
             type: 'input',
-            message: questions[4],
+            message: questions[7],
             name: 'license',
         },
     ])
     .then((data) =>
+     // Write response to file  
         writeToFile(fileName, data)
     )
-    
-    // Write response to file  
-    
-
 }
 
 
