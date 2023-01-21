@@ -1,3 +1,5 @@
+const fileName = 'question-inputs';
+
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
@@ -12,12 +14,16 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    console.log(data)
+    fs.appendFile(`${fileName}.txt`, JSON.stringify(data), (err) =>
+            err ? console.error(err) : console.log('sent user responses to txt!'))
+}
 
 // TODO: Create a function to initialize app
-function init() {}
-
-inquirer
+function init() {
+// Clear existing log files
+    inquirer
     .prompt([
         {
             // Get project name
@@ -50,11 +56,15 @@ inquirer
             name: 'license',
         },
     ])
-    .then((response)=>
-        fs.appendFile('inputs.txt', JSON.stringify(response), (err) =>
-            err ? console.error(err) : console.log('sent user responses to txt!')
-        )
+    .then((data) =>
+        writeToFile(fileName, data)
     )
+    
+    // Write response to file  
+    
+
+}
+
 
 // Function call to initialize app
 init();
