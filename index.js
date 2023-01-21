@@ -9,9 +9,10 @@ const questions = [
     'What is the name of your project?',
     'Enter your gitHub username',
     'Enter your email',
+    'Write a brief description of what this project does',
     'Enter the github usernames of other people who worked on this project with you seperated by a comma.',
     'Write installation instructions to run this project',
-    'Write instructions for testiing this code',
+    'Write instructions for testing this code',
     'What type of license would you like to use?',
 ];
 
@@ -44,25 +45,25 @@ inquirer
         {
             // Get user email
             type: 'input',
-            message: questions[3],
+            message: questions[2],
             name: 'email',
         },
         {
             // Get user project description
             type: 'input',
-            message: questions[4],
+            message: questions[3],
             name: 'description',
         },
         {
             // Get credits
             type: 'input',
-            message: questions[5],
+            message: questions[4],
             name: 'credits',
         },
         {
             // Get install instructions
             type: 'input',
-            message: questions[6],
+            message: questions[5],
             name: 'installationaIns',
         },
         {
