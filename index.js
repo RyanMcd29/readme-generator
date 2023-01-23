@@ -79,9 +79,10 @@ inquirer
         },
         {
             // Get license
-            type: 'input',
+            type: 'rawlist',
             message: questions[7],
             name: 'license',
+            choices: ['MIT License'  ],
         },
     ])
     .then((answers) =>
