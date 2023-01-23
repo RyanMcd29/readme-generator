@@ -1,6 +1,3 @@
-var licenseBadge = ''
-var licenseLink = ''
-
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -22,7 +19,7 @@ function renderLicenseSection(license) {
   var licenseLink = renderLicenseLink(license)
 
   return `## License 
-  [Licensed for use under ${license}](${licenseLink})
+  [Licensed for use under <a href=${licenseLink}>${license}]</a>
   ![](${licenseBadge})`
 }
 
