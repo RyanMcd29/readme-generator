@@ -1,23 +1,20 @@
-# ${projectName}
+# ${answers.projectName}
 
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Testing Instructions](#testing-instructions)
+- [Usage](#testing-instructions)
 - [Credits](#credits)
 - [License](#license)
 
 ## Description
-${projectDesc}
+${answers.projectDesc}
 
 ## Installation
-${installIns}
+${answers.installIns}
 ## Usage
-${usageIns}
+${answers.usageIns}
 ## Credits
-${credits}
+${answers.credits}
 ## License
-${licenseName}
-${licenseLink}
-${licenseImg}

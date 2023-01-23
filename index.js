@@ -1,6 +1,7 @@
 const fileName = 'question-inputs';
 
 // TODO: Include packages needed for this application
+const generateMarkdown = require('./utils/generateMarkdown')
 const fs = require('fs');
 const inquirer = require('inquirer');
 
@@ -17,10 +18,14 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    console.log(data)
-    fs.appendFile(`${fileName}.txt`, JSON.stringify(data), (err) =>
-            err ? console.error(err) : console.log('sent user responses to txt!'))
+function writeToFile(fileName, answers) {
+    
+    console.log(generateMarkdown(answers))
+    
+    // fs.appendFile(`${fileName}.txt`, JSON.stringify(data), (err) =>
+    //         err ? console.error(err) : console.log('sent user responses to txt!'))
+
+
 }
 
 // TODO: Create a function to initialize app
@@ -52,7 +57,7 @@ inquirer
             // Get user project description
             type: 'input',
             message: questions[3],
-            name: 'description',
+            name: 'projectDesc',
         },
         {
             // Get credits
@@ -64,13 +69,13 @@ inquirer
             // Get install instructions
             type: 'input',
             message: questions[5],
-            name: 'installationaIns',
+            name: 'installIns',
         },
         {
             // Testing Instructions
             type: 'input',
             message: questions[6],
-            name: 'testingIns',
+            name: 'usageIns',
         },
         {
             // Get license
@@ -79,9 +84,9 @@ inquirer
             name: 'license',
         },
     ])
-    .then((data) =>
+    .then((answers) =>
      // Write response to file  
-        writeToFile(fileName, data)
+        writeToFile(fileName, answers)
     )
 }
 
