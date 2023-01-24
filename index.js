@@ -1,4 +1,4 @@
-const fileName = 'generated-readme';
+
 
 // TODO: Include packages needed for this application
 const generateMarkdown = require('./utils/generateMarkdown')
@@ -93,9 +93,11 @@ inquirer
                         'CDDL-1.0', 'EPL-2.0', ],
         },
     ])
-    .then((answers) =>
+    .then((answers)=>{
      // Write response to file  
+        fileName = `${answers.projectName}-README`;
         writeToFile(fileName, answers)
+    }
     )
 }
 
