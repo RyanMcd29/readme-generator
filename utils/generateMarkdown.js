@@ -58,8 +58,6 @@ ${answers.projectDesc}
 ${answers.installIns}
 ## Contributing
 ${answers.contribution}
-## Usage
-${answers.usageIns}
 ## Tests
 ${answers.testingIns}
 ## Questions
