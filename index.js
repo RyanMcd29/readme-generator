@@ -1,4 +1,4 @@
-const fileName = 'question-inputs';
+const fileName = 'generated-readme';
 
 // TODO: Include packages needed for this application
 const generateMarkdown = require('./utils/generateMarkdown')
@@ -19,6 +19,12 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, answers) {
+    fs.writeFile(`./${fileName}.md`, generateMarkdown(answers), err => {
+        if (err) {
+            console.log(err)
+        }
+        // file written successfullu
+    })
     
     console.log(generateMarkdown(answers))
     
@@ -82,7 +88,7 @@ inquirer
             type: 'rawlist',
             message: questions[7],
             name: 'license',
-            choices: [  'Apache-2.0','BSD-3-Clause', 'BSD-2-Clause',
+            choices: [  'None', 'Apache-2.0','BSD-3-Clause', 'BSD-2-Clause',
                         'gpl-license', 'lgpl-license', 'MIT', 'MPL-2.0',
                         'CDDL-1.0', 'EPL-2.0', ],
         },

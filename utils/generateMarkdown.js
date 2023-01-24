@@ -1,7 +1,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
- return `https://img.shields.io/badge/License-${license}-2ea44f`
+  let licenseBadge = license.replace('-','_')
+ return `https://img.shields.io/badge/License-${licenseBadge}-2ea44f`
 }
 
 
@@ -18,11 +19,15 @@ function renderLicenseSection(license) {
   var licenseBadge = renderLicenseBadge(license)
   var licenseLink = renderLicenseLink(license)
 
-  return `## License 
-  [Licensed for use under <a href=${licenseLink}>${license}]</a>
-  ![](${licenseBadge})`
-}
+if (license === 'None') {
+    return ''
+  } else {
 
+    return `## License 
+    Licensed for use under <a href=${licenseLink}>${license}</a>
+    ![](${licenseBadge})`
+  }
+}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   
