@@ -95,12 +95,10 @@ inquirer
     ])
     .then((answers)=>{
      // Write response to file  
-        fileName = `${answers.projectName}-README`;
+        fileName = `${answers.projectName.replaceAll(' ','-')}-README`;
         writeToFile(fileName, answers)
     }
     )
 }
-
-
 // Function call to initialize app
 init();

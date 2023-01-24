@@ -19,8 +19,8 @@ function renderLicenseSection(license) {
     if (license === 'None') {
         return ''
       } else {
-        return `## License 
-        Licensed for use under <a href=${licenseLink}>${license}</a> for more information please see [license](./license) in repo.`
+return `## License
+Licensed for use under <a href=${licenseLink}>${license}</a> for more information please see [license](./license) in repo.`
       }
     }
 // TODO: Create a function to generate markdown for README
