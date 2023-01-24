@@ -47,10 +47,15 @@ ${answers.projectDesc}
 
 ## Table of Contents
   [Description](#description)
+
   [Installation](#installation)
+
   [Contributing](#contributing)
+
   [Tests](#tests)
+
   [Questions](#questions)
+  
   ${licenseContents}
 
 

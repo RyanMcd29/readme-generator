@@ -1,17 +1,23 @@
 # Readmeifier README Generator ![](https://img.shields.io/badge/License-MIT-2ea44f)
 https://github.com/RyanMcd29/readme-generator
 
-[Screen Recording of app](Assets/ReadMe%20Screen%20Record.mov)
+![App Screen recording](Assets/readmeifiier%20recording.gif)
 
 ## Description
 Readmeifier is a terminal-based app that takes user inputs to generate a README.md file. The file generated is a basic README outline that follows the general principles of a professionally written README. This file that is outputted is in markdown format and can be customised by the user after it has been generated.
 
 ## Table of Contents
+
   [Description](#description)
+
   [Installation](#installation)
+
   [Contributing](#contributing)
+
   [Tests](#tests)
+  
   [Questions](#questions)
+
   [License](#license)
 
 
