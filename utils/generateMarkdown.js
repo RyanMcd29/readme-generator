@@ -25,7 +25,7 @@ if (license === 'None') {
   } else {
 
   return `## License 
-  Licensed for use under <a href=${licenseLink}>${license}</a>
+  Licensed for use under <a href=${licenseLink}>${license}</a> for more information please see [license](./license) in repo.
   ![](${licenseBadge})`
   }
 }
@@ -42,32 +42,34 @@ function generateMarkdown(answers) {
     licenseContents = `- [License](#license)`
   }
 
-return `# ${answers.projectName} by ${answers.userName}b
+return `# ${answers.projectName}
 
 
- ## Table of Contents
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
-  ${licenseContents}
-  
 ## Description
-  ${answers.projectDesc}
-  ## Installation
-  ${answers.installIns}
-  ## Contributing
-  ${answers.contribution}
-  ## Usage
-  ${answers.usageIns}
-  ## Tests
-  ${answers.testingIns}
-  ## Questions
-  Created by [${answers.userName}](https://github.com/${answers.userName})
-  If you have any questions about this project please contact me at [${answers.email}](mailto:${answers.email}).
+${answers.projectDesc}
 
-  ${licenseSection}
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+${licenseContents}
+
+
+## Installation
+${answers.installIns}
+## Contributing
+${answers.contribution}
+## Usage
+${answers.usageIns}
+## Tests
+${answers.testingIns}
+## Questions
+Created by [${answers.userName}](https://github.com/${answers.userName}).
+If you have any questions about this project please contact me at [${answers.email}](mailto:${answers.email}).
+
+${licenseSection}
 `;
 }
 
