@@ -81,7 +81,7 @@ inquirer
             // Testing Instructions
             type: 'input',
             message: questions[6],
-            name: 'usageIns',
+            name: 'testingIns',
         },
         {
             // Get license
