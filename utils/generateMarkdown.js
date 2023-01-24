@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let licenseBadge = license.replace('-','_')
+  let licenseBadge = license.replaceAll('-','_')
  return `https://img.shields.io/badge/License-${licenseBadge}-2ea44f`
 }
 
@@ -21,44 +21,53 @@ function renderLicenseSection(license) {
 
 if (license === 'None') {
     return ''
+
   } else {
 
-    return `## License 
-    Licensed for use under <a href=${licenseLink}>${license}</a>
-    ![](${licenseBadge})`
+  return `## License 
+  Licensed for use under <a href=${licenseLink}>${license}</a>
+  ![](${licenseBadge})`
   }
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   
-  
+  var licenseContents = ''
   license = answers.license
 
   var licenseSection = renderLicenseSection(license)
+  
+  // Show license in contents if not empty string
+  if (licenseSection !== '') {
+    licenseContents = `- [License](#license)`
+  }
 
-  return `# ${answers.projectName} by ${answers.userName}
+return `# ${answers.projectName} by ${answers.userName}b
 
-  ## Table of Contents
+
+ ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Usage](#testing-instructions)
-  - [Credits](#credits)
-  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  ${licenseContents}
   
-  ## Description
+## Description
   ${answers.projectDesc}
-  
   ## Installation
   ${answers.installIns}
+  ## Contributing
+  ${answers.contribution}
   ## Usage
   ${answers.usageIns}
-  ## Credits
-  ${answers.credits}
+  ## Tests
+  ${answers.testingIns}
   ## Questions
-  If you have any questions about this project please contact me at ${amswers.email}.
-  ${licenseSection}
+  Created by [${answers.userName}](https://github.com/${answers.userName})
+  If you have any questions about this project please contact me at [${answers.email}](mailto:${answers.email}).
 
+  ${licenseSection}
 `;
 }
 

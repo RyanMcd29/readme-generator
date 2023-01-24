@@ -10,8 +10,8 @@ const questions = [
     'What is the name of your project?',
     'Enter your gitHub username',
     'Enter your email',
-    'Write a brief description of what this project does',
-    'Enter the github usernames of other people who worked on this project with you seperated by a comma.',
+    'Enter a brief description of what this project does',
+    'Enter guidelines for contributing to your project',
     'Write installation instructions to run this project',
     'Write instructions for testing this code',
     'What type of license would you like to use?',
@@ -69,7 +69,7 @@ inquirer
             // Get credits
             type: 'input',
             message: questions[4],
-            name: 'credits',
+            name: 'contribution',
         },
         {
             // Get install instructions
