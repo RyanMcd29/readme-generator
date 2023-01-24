@@ -1,12 +1,12 @@
 # 231
 
   ## Table of Contents
-  - [Description](#description)
+  - [Description](##description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Usage](#testing-instructions)
-  - [Credits](#credits)
-  - [License](#license)
+  - [Credits](##credits)
+  - [Questions](##questions)
   
   ## Description
   213

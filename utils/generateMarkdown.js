@@ -36,7 +36,7 @@ function generateMarkdown(answers) {
 
   var licenseSection = renderLicenseSection(license)
 
-  return `# ${answers.projectName}
+  return `# ${answers.projectName} by ${answers.userName}
 
   ## Table of Contents
   - [Description](#description)
@@ -55,7 +55,10 @@ function generateMarkdown(answers) {
   ${answers.usageIns}
   ## Credits
   ${answers.credits}
+  ## Questions
+  If you have any questions about this project please contact me at ${amswers.email}.
   ${licenseSection}
+
 `;
 }
 
